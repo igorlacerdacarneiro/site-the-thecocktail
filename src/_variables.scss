@@ -1,0 +1,63 @@
+/* VARIABLES */
+$main-color: #fff;
+$sec-color: #000;
+$red-color: #FF3737;
+$tomato-color: #FF6347;
+$green-color: #4CAB00;
+$aqua-color: #00C775;
+$blue-color: #0090FF;
+$orange-color: #FF9200;
+$pink-color: #FF47FF;
+$violet-color: #6E00FF;
+$gray10: #202020;
+$gray9: #303030; 
+$gray7: #707070;
+$gray6: #4D4D4D;
+$gray5: #616161;
+$gray4: #7A7A7A;
+$gray3: #949494;
+$gray2: #C1C1C1;
+$gray1: #D8D8D8;
+
+$main-font: 'Open Sans',
+sans-serif;
+$font-bd: bold;
+$font-bl: 800;
+
+$width50: 50%;
+$width60: 60%;
+$width70: 70%;
+$width80: 80%;
+$width90: 90%;
+
+/* MIXIN MEDIA QUERYES */
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1700px) {
+    @content;
+  }
+}
