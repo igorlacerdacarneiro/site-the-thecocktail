@@ -1,1 +1,23 @@
-<div>page drinks</div>
+<header>
+    <app-header [headerOptions]="headerOptions"></app-header>
+</header>
+
+
+<div class="form-group form-group--full no-side-margin" style="width: 50%; margin: 20px 0;">
+    <label class="label--color">Pesquisar</label>
+    <input class="ipt ipt--ghost ipt--full" type="text" name="search" placeholder="Faça uma busca..."
+        [formControl]="searchString" autocomplete="off" />
+</div>
+
+
+<div class="container">
+    <div class="cards-list"
+        *ngIf="(drinksFacade.drinks$ | async) && (drinksFacade.drinks$ | async).length; else noChannelContent">
+        <app-card-drink *ngFor="let item of drinksFacade.drinks$ | async; trackBy: drinksTrackFn" [drink]="item"
+            (clickTrigger)="onSelectDrink($event)"></app-card-drink>
+    </div>
+</div>
+
+<ng-template #noChannelContent>
+    <h2 class="contentNotFound">Nenhum drink foi encontrado</h2>
+</ng-template>
