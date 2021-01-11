@@ -1,0 +1,15 @@
+<section class="modal">
+    <div class="modal-content">
+        <button class="close-modal" (click)="close()"></button>
+        <h2>{{ modalSettings.title | titlecase }}</h2>
+        <p>{{ modalSettings.subtitle }}</p>
+
+        <div style="margin: 25px 0; height: 50px;">
+        </div>
+
+        <div class="modal__footer">
+            <a class="btn btn--sec-color btn--medium-height btn--left-margin btn--medium btn--font-bd">{{
+                modalSettings.btnText.toUpperCase() }}</a>
+        </div>
+    </div>
+</section>
