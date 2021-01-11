@@ -1,0 +1,22 @@
+.action-menu {
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    z-index: 8;
+    bottom: 20px;
+    right: 20px;
+    justify-content: flex-end;
+
+    >a {
+      @media screen and (max-width: 767px) {
+        width: 40px;
+
+        >img {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

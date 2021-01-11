@@ -1,0 +1,9 @@
+<div class="action-menu">
+  <ng-container *ngFor="let button of buttons">
+    <a class="btn btn--left-margin btn--img btn--sec-color btn--medium btn-medium-action btn--font-bd btn--elev-2"
+      (click)="onClick(button)">
+      <img *ngIf="button.icon" [src]="'../../../../assets/images/icons/' + button.icon + '.svg'" [alt]="button.label" />
+      <span>{{ button.label | uppercase }}</span>
+    </a>
+  </ng-container>
+</div>
