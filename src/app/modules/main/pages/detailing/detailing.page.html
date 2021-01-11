@@ -1,1 +1,52 @@
-<div>page detailing</div>
+<header>
+    <app-header [headerOptions]="headerOptions"></app-header>
+</header>
+<div class="detail-container">
+    <div>
+        <img [src]="detailingFacade.drink.strDrinkThumb" />
+    </div>
+    <div class="detail--infos">
+        <h2>{{ detailingFacade.drink.strDrink }}</h2>
+        <hr>
+        <p>Category: <span>{{ detailingFacade.drink.strCategory }}</span></p>
+        <p>Glass: <span>{{ detailingFacade.drink.strGlass }}</span></p>
+        <p>Alcoholic: <span>{{ detailingFacade.drink.strAlcoholic }}</span></p>
+        <hr>
+        <p class="detail--infos--p">Ingredients:</p>
+        <p>{{ detailingFacade.drink.strIngredient1 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient2 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient3 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient4 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient5 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient6 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient7 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient8 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient9 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient10 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient10 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient12 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient13 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient14 }}</p>
+        <p>{{ detailingFacade.drink.strIngredient15 }}</p>
+        <hr>
+        <p class="detail--infos--p">Measures:</p>
+        <p>{{ detailingFacade.drink.strMeasure1 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure2 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure3 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure4 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure5 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure6 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure7 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure8 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure9 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure10 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure11 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure12 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure13 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure14 }}</p>
+        <p>{{ detailingFacade.drink.strMeasure15 }}</p>
+        <hr>
+        <p class="detail--infos--p">Instructions:</p>
+        <p>{{ detailingFacade.drink.strInstructions }}</p>
+    </div>
+</div>

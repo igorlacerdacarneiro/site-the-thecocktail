@@ -1,0 +1,37 @@
+@import 'src/variables';
+
+.detail-container {
+    display: flex;
+    margin-top: 20px;
+
+    img {
+        width: 350px;
+    }
+
+    .detail--infos {
+        padding: 0 20px;
+        width: 100%;
+
+        h2 {
+            font-size: 22px;
+            font-weight: $font-bd;
+        }
+
+        span {
+            font-weight: $font-bd;
+        }
+
+        .detail--infos--p {
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        display: block;
+
+        .detail--infos {
+            padding: 0;
+        }
+    }
+}
