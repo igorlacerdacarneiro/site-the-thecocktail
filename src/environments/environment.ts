@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:3000/api',
+  API_URL: 'https://www.thecocktaildb.com/api/json/v1/1',
   ADFS_AUTH: false,
   STORAGE_TYPE: 'session',
-  MOCKS: true,
+  MOCKS: false,
 };
 
 /*
