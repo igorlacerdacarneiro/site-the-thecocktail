@@ -1,1 +1,51 @@
-<div>page initial</div>
+
+<div class="list--filters">
+    <app-side-filter (selectEventEmitter)="selectFilter($event)"></app-side-filter>
+    <div class="filter">
+        <h1 *ngIf="!select">Selecione uma opção ao lado para exibir os filtros</h1>
+        <div [ngClass]="select === 'c' ?'filter--content--show':'filter--content'">
+            <h1>Selecione um filtro:</h1>
+            <ul style="max-height: 400px; overflow-y: auto;">
+                <li *ngFor="let item of initalFacade.categories$ | async; trackBy: categoriessTrackFn" (click)="selectedFilter(item.strCategory)">
+                    <div class="filter--row">
+                        <span>{{item.strCategory}}</span>
+                        <img src="./../../../../assets/images/icons/arrow_rigth.svg" alt="" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div [ngClass]="select === 'g' ?'filter--content--show':'filter--content'">
+            <h1>Selecione um filtro:</h1>
+            <ul style="max-height: 400px; overflow-y: auto;">
+                <li *ngFor="let item of initalFacade.glasses$ | async; trackBy: glassesTrackFn" (click)="selectedFilter(item.strGlass)">
+                    <div class="filter--row">
+                        <span>{{item.strGlass}}</span>
+                        <img src="./../../../../assets/images/icons/arrow_rigth.svg" alt="" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div [ngClass]="select === 'i' ?'filter--content--show':'filter--content'">
+            <h1>Selecione um filtro:</h1>
+            <ul style="max-height: 400px; overflow-y: auto;">
+                <li *ngFor="let item of initalFacade.ingredients$ | async; trackBy: ingredientsTrackFn" (click)="selectedFilter(item.strIngredient1)">
+                    <div class="filter--row">
+                        <span>{{item.strIngredient1}}</span>
+                        <img src="./../../../../assets/images/icons/arrow_rigth.svg" alt="" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div [ngClass]="select === 'a' ?'filter--content--show':'filter--content'">
+            <h1>Selecione um filtro:</h1>
+            <ul style="max-height: 400px; overflow-y: auto;">
+                <li *ngFor="let item of initalFacade.alcoholics$ | async; trackBy: alcoholicsTrackFn" (click)="selectedFilter(item.strAlcoholic)">
+                    <div class="filter--row">
+                        <span>{{item.strAlcoholic}}</span>
+                        <img src="./../../../../assets/images/icons/arrow_rigth.svg" alt="" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

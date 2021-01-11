@@ -1,0 +1,46 @@
+@import 'src/variables';
+
+h1 {
+    text-align: center;
+    font-weight: $font-bl;
+}
+
+.list--filters{
+    display: flex;
+
+    .filter {
+        width: 100%;
+    }
+}
+
+.filter--content {
+    display: none;
+}
+
+.filter--content--show {
+    display: block;
+}
+
+.filter--row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px;
+    width: 90%;
+    margin: 10px auto;
+
+    transition: all 0.2s linear;
+    background-color: $main-color;
+    color: $sec-color;
+
+    img {
+        padding: 0 10px;
+    }
+
+    &:hover {
+      transition: all 0.2s cubic-bezier(0.17, 0.67, 0.34, 1.19);
+      transform: scale(1.05);
+    }
+}
