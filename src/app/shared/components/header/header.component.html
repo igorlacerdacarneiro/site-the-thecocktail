@@ -1,0 +1,17 @@
+<div class="page-header" *ngIf="headerOptions">
+  <div class="page-header__wrapper">
+    <div class="page-header__container">
+      <a class="btn btn--minor btn--elev-1 btn--main-color" (click)="back()" *ngIf="!headerOptions?.hideBackButton">
+        <img src="../../../../assets/images/icons/back.svg" alt="Voltar" />
+      </a>
+      <div [class]="'page-header__info ' + headerOptions?.titleColor + '--color'">
+        <h2>
+          {{ headerOptions?.title }}
+          <p *ngIf="titleComplement">{{ titleComplement }}</p>
+        </h2>
+        <span>{{ headerOptions?.subtitle }}</span>
+      </div>
+    </div>
+    <app-header-buttons [buttons]="headerOptions?.buttons"></app-header-buttons>
+  </div>
+</div>
